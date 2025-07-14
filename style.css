@@ -364,6 +364,7 @@ header {
   align-items: center;
   background-color: rgb(216, 226, 218);
   padding: 1rem 0 1rem 0;
+  overflow-x: hidden;
 }
 .chef-img div img {
   border-radius: 50%;
