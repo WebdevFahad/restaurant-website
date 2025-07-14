@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Resturent.css">
+    <link rel="stylesheet" href="restaurant-mobile.css">
+    <link rel="stylesheet" href="restaurant-tablet.css">
+    <link rel="shortcut icon" href="image/logo-restaurant-website.jfif" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body class="lock-scroll">
+      <div class="serch-overlay" id="serch-overlay">
+                    <div class="serch-box">
+                        <div class="serch-contant">
+                            <input type="text" id="serch-input" placeholder="search items">
+                            <div class="serch-items"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+    <div class="pre-loader">
+ <div class="loader"></div>
+ </div>
+
+
+    <header>
+        <div class="nav ">
+            <div class="logo-sec">
+                <h1> LOGO</h1>
+
+                <div class="order-logo" id="order-mobile">
+                    <a href="#"> <i class="fa-solid fa-basket-shopping"></i></a>
+                    <span id="cart-count-mobile">0</span>
+                </div>
+                <div id="cart-modal" class="cart-modal">
+                    <div class="cart-content">
+                        <h2>Your Cart</h2>
+                        <div id="cart-items"></div>
+
+
+                        <div class="cart-summary">
+                            <h3>Total: <span id="cart-total">$0.00</span></h3>
+                            <button class="place-order" onclick="placeOrder()">Place Order</button>
+                        </div>
+
+
+                        <button onclick="closeCart()" class="close-cart">Close</button>
+                    </div>
+                </div>
+                <div class="hamburger" id="hamburger">&#9776;</div>
+
+
+            </div>
+            <div class="nav-half-section">
+
+
+
+                <div class="nav-options">
+                    <ol>
+                        <a href="https://github.com/webdevFahad/portfolio-website" target="_blank">
+                            <li>Github source</li>
+                        </a>
+                        <a href="#">
+                            <li>Abouts</li>
+                        </a>
+                        <a href="#">
+                            <li>Menu</li>
+                        </a>
+                        
+                        <a href="#">
+                            <li> Reviews</li>
+                        </a>
+                    </ol>
+                </div>
+
+                <div class="order-logo" id="mobi-order">
+                    <a href="#"> <i class="fa-solid fa-basket-shopping"></i></a>
+                    <span id="cart-count-desktop">0</span>
+                </div>
+
+               
+
+
+
+
+                <div class="order-button">
+                    <a href="restaurant-reserve .html" target="_blank"><button>Reserve table</button></a>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="main-1">
+
+            <div class="m1l1">
+                <h1>
+                    We Serve the Taste <br>You love
+                </h1>
+                <br>
+                <br>
+                <p>
+                 Step into a world of refined elegance—soft candlelight glows against exposed brick walls, the hum of conversation blends with clinking wine glasses, and the aroma of freshly prepared dishes beckons you to the table. Our chefs craft each plate with passion, blending seasonal ingredients, time-honored techniques, and daring creativity.
+                </p>
+                <br>
+                <br>
+                <div class="button-sec-m1l1">
+                    <div class="order-button">
+                        <a href="#Regular-menu"> <button> Explore Food</button></a>
+                    </div>
+                    <div class="btn-2">
+
+                        <a href="#"><button class="serch-button"> <i class="fa-solid fa-magnifying-glass"></i> Search
+                                box</button></a>
+                    </div>
+
+                </div>
+
+              
+
+              
+
+
+            </div>
+
+            <div class="m1l2  ">
+                <div class="m1l2-img-1  active">
+                    <a href="#burger-2"> <img src="image/rest1-removebg-preview.png" alt=""
+                            style="border-radius: 2rem;">
+                    </a>
+                </div>
+                <div class="m1l2-img-2 ">
+                    <a href="#deesert-1 "> <img src="image/rest3-removebg-preview.png" alt="" width="500px"
+                            style="border-radius: 2rem;">
+                    </a>
+                </div>
+                <div class="m1l2-img-3 ">
+                    <a href="#platter-h"> <img src="image/rest4-removebg-preview.png" alt="" width="500px"
+                            style="border-radius: 2rem;">
+                    </a>
+                </div>
+                <div class="m1l2-img-4 ">
+                    <a href="#"> <img src="image/rest5-removebg-preview.png" alt="" width="500px"
+                            style="border-radius: 2rem;">
+                    </a>
+                </div>
+                <div class="button-sec">
+                    <button class="dishes"> <img src="image/rest2.jfif" alt="" width="20px"
+                            style="border-radius: 2rem; align-items: center; justify-content: center; ">Dishes</button>
+                    <button class="soda"> <img src="image/short-des.jfif" alt="" width="20px"
+                            style="border-radius: 2rem; align-items: center; justify-content: center; ">
+                        Dessert</button>
+                    <button class="platter"> <img src="image/short-bur.jfif" alt="" width="20px"
+                            style="border-radius: 2rem; align-items: center; justify-content: center; ">Platter</button>
+                    <button class="snacks"> <img src="image/short-snacks.jfif" alt="" width="20px"
+                            style="border-radius: 2rem; align-items: center; justify-content: center; ">Snacks</button>
+                </div>
+            </div>
+
+
+
+        </div>
+        </div>
+
+
+
+
+
+
+
+    </header>
+      <div class="submit-meg animate__animated animate__fadeIn animate__slower">
+
+                    
+                    <button id="success-msg-button">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+
+
+
+                </div>
+
+
+
+
+    <div class="main2" >
+        <div class="m2l1">
+            <div class="h">
+                <H1>
+                    Our Famous food
+                </H1>
+            </div>
+            <div class="btn3">
+                <button id="left1">
+                    < </button>
+                        <button id="right1">></button>
+            </div>
+        </div>
+
+
+
+
+        <div class="m2l2 animationshow">
+            <div class="gallery">
+
+                <section>
+                    <div class="item-1">
+                        <div>
+                            <img src="image/loaded-fries.jfif" alt="">
+                        </div>
+
+                        <div class="pay-in">
+                            <h2>
+                                Cheeze Pizza
+                            </h2>
+
+                            <p id="star"> ****</p>
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam est nulla </p>
+                        </div>
+                        <div class="prices">
+                            <div>
+                                <button class="bt4">Add to cart</button>
+                            </div>
+                            <div id="food-prices">
+                                $35.00
+                            </div>
+
+                        </div>
+                        <div class="quantity-control">
+                            <button class="qty minus">−</button>
+                            <span class="qty-val">1</span>
+                            <button class="qty plus">+</button>
+                        </div>
+                    </div>
+                    <div class="item-1">
+                        <div>
+                            <img src="image/piz2.jfif" alt="">
+                        </div>
+
+                        <div class="pay-in">
+                            <h2>
+                                Loaded Fries
+                            </h2>
+
+                            <p id="star"> ****</p>
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam est nulla </p>
+                        </div>
+                        <div class="prices">
+                            <div>
+                                <button class="bt4">Add to cart</button>
+                            </div>
+                            <div id="food-prices">
+                                $35.00
+                            </div>
+
+                        </div>
+                        <div class="quantity-control">
+                            <button class="qty minus">−</button>
+                            <span class="qty-val">1</span>
+                            <button class="qty plus">+</button>
+                        </div>
+                    </div>
+                    <div class="item-1">
+                        <div>
+                            <img src="image/short-des.jfif" alt="">
+                        </div>
+
+                        <div class="pay-in">
+                            <h2>
+                                Dessert
+                            </h2>
+
+                            <p id="star"> ****</p>
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam est nulla </p>
+                        </div>
+                        <div class="prices">
+                            <div>
+                                <button class="bt4">Add to cart</button>
+                            </div>
+                            <div id="food-prices">
+                                $30.00
+                            </div>
+
+                        </div>
+                        <div class="quantity-control">
+                            <button class="qty minus">−</button>
+                            <span class="qty-val">1</span>
+                            <button class="qty plus">+</button>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+
+
+                <section>
+                    <div class="item-1">
+                        <div>
+                            <img src="image/ch-shawarma.jfif" alt="">
+                        </div>
+
+                        <div class="pay-in">
+                            <h2>
+                                Beef Shawarma
+                            </h2>
+
+                            <p id="star"> ****</p>
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam est nulla </p>
+                        </div>
+                        <div class="prices">
+                            <div>
+                                <button class="bt4">Add to cart</button>
+                            </div>
+                            <div id="food-prices">
+                                $20.00
+                            </div>
+
+                        </div>
+                        <div class="quantity-control">
+                            <button class="qty minus">−</button>
+                            <span class="qty-val">1</span>
+                            <button class="qty plus">+</button>
+                        </div>
+                    </div>
+                    <div class="item-1">
+                        <div>
+                            <img src="image/cofe5.jpg" alt="" class="ic-shake">
+                        </div>
+
+                        <div class="pay-in">
+                            <h2>
+                                Oreo Shake
+                            </h2>
+
+                            <p id="star"> ****</p>
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam est nulla </p>
+                        </div>
+                        <div class="prices">
+                            <div>
+                                <button class="bt4">Add to cart</button>
+                            </div>
+                            <div id="food-prices">
+                                $35.00
+                            </div>
+
+                        </div>
+                        <div class="quantity-control">
+                            <button class="qty minus">−</button>
+                            <span class="qty-val">1</span>
+                            <button class="qty plus">+</button>
+                        </div>
+                    </div>
+                    <div class="item-1">
+                        <div>
+                            <img src="image/des-ic.jfif" alt="">
+                        </div>
+
+                        <div class="pay-in">
+                            <h2>
+                                Ice Dessert
+                            </h2>
+
+                            <p id="star"> ****</p>
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam est nulla </p>
+                        </div>
+                        <div class="prices">
+                            <div>
+                                <button class="bt4">Add to cart</button>
+                            </div>
+                            <div id="food-prices">
+                                $30.00
+                            </div>
+
+                        </div>
+                        <div class="quantity-control">
+                            <button class="qty minus">−</button>
+                            <span class="qty-val">1</span>
+                            <button class="qty plus">+</button>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-3  ">
+        <div class="full animationshow-right-mobile" style="display: flex;">
+                    <div class="m3l1 ">
+            <div class="chef-info">
+                <h1>Best chef of the world</h1>
+                <p>
+                    Step into a world of refined elegance—soft candlelight glows against exposed brick walls, the hum of conversation blends with clinking wine glasses, and the aroma of freshly prepared dishes beckons you to the table. Our chefs craft each plate with passion, blending seasonal ingredients, time-honored techniques, and daring creativity.
+                </p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="chef-btn ">
+                <button class="bt5">
+                 Make a Career
+                </button>
+            </div>
+        </div>
+        <div class="m3l2 ">
+            <div class="chef-img animationshow-right ">
+                <div>
+                    <img src="image/chef3.jfif" alt="" width="90%">
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+
+    <div class="main4" id="Regular-menu">
+        <div class="h">
+            <h1>
+                Our Regular Menu pak
+            </h1>
+        </div>
+        <div class="food-btn">
+            <button class="bt5" id="pizza-bt"> Pizza</button>
+            <button class="bt5" id="burger-bt">Burger</button>
+
+            <button class="bt5" id="dessert-bt"> Desserts</button>
+            <button class="bt5" id="platter-bt"> Platter</button>
+            <button class="bt5" id="snacks-bt"> Snacks</button>
+            <button class="bt5" id="fries-bt"> Fries</button>
+            <button class="bt5" id="drinks-bt"> Drinks</button>
+
+        </div>
+    </div>
+
+    <div class="main6 active">
+        <div class="food-burger">
+
+
+            <div class="item-1">
+                <div>
+                    <img src="image/piza1.jfif" alt="">
+                </div>
+                <h2>Pizza 1</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+
+                </div>
+            </div>
+
+            <div class="item-1">
+                <div>
+                    <img src="image/piz2.jfif" alt="">
+                </div>
+                <h2>Pizza 2</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+
+            <div class="item-1">
+                <div>
+                    <img src="image/piza3.jfif" alt="">
+                </div>
+                <h2>Pizza 3</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/piza4.jfif" alt="">
+                </div>
+                <h2>Pizza 4</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/piza5.jfif" alt="">
+                </div>
+                <h2>Pizza 5</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/piza6.jfif" alt="">
+                </div>
+                <h2>Pizza 6</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="main5 ">
+        <div class="food-burger">
+            <div class="item-1">
+                <div>
+                    <img src="image/bur2.jfif" alt="">
+                </div>
+                <h2> Burger 1</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+
+            <div class="item-1">
+                <div>
+                    <img src="image/rest2.jfif" alt="">
+                </div>
+                <h2>burger 2</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/bur4.jfif" alt="">
+                </div>
+                <h2>burger 3</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/bur5.jfif" alt="">
+                </div>
+                <h2>burger 4</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/bur3.jfif" alt="">
+                </div>
+                <h2>burger 5</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/bur2.jfif" alt="">
+                </div>
+                <h2>burger 6</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main7">
+        <div class="food-burger">
+            <div class="item-1">
+                <div>
+                    <img src="image/deser.jfif" alt="">
+                </div>
+                <h2>Dessert 1</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+
+            </div>
+
+            <div class="item-1">
+                <div>
+                    <img src="image/deser2.jfif" alt="">
+                </div>
+                <h2>Dessert 2</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/deser3.jfif" alt="">
+                </div>
+                <h2>Dessert 3</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1" id="deesert-1">
+                <div>
+                    <img src="image/rest3-removebg-preview.png" alt="">
+                </div>
+                <h2>Dessert 3</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/deser4.jfif" alt="">
+                </div>
+                <h2>Dessert 4</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/desert1.jfif" alt="">
+                </div>
+                <h2>Dessert 5</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/des-ic.jfif" alt="">
+                </div>
+                <h2>Dessert 6</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- platter -->
+    <div class="main8">
+        <div class="food-burger">
+            <div class="item-1">
+                <div>
+                    <img src="image/platter-1.jfif" alt="">
+                </div>
+                <h2>Platter 1</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+
+            <div class="item-1">
+                <div>
+                    <img src="image/plater-2.jfif" alt="">
+                </div>
+                <h2>Platter 2</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/plater-3.jfif" alt="">
+                </div>
+                <h2>Platter 3</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1" id="platter-h">
+                <div>
+                    <img src="image/rest4.jfif" alt="">
+                </div>
+                <h2>Platte 4r</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- snacks -->
+    <div class="main9">
+        <div class="food-burger">
+            <div class="item-1">
+                <div>
+                    <img src="image/snacks1.jfif" alt="">
+                </div>
+                <h2>snacks 1</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices"> $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1" id="snack-h">
+                <div>
+                    <img src="image/snacks1.jfif" alt="">
+                </div>
+                <h2>snacks 1</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+
+            <div class="item-1">
+                <div>
+                    <img src="image/sna3.jfif" alt="">
+                </div>
+                <h2>snacks 1</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/sn.jfif" alt="">
+                </div>
+                <h2>snacks 3</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/short-snacks.jfif" alt="">
+                </div>
+                <h2>snacks 4</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fries -->
+    <div class="main10">
+        <div class="food-burger">
+            <div class="item-1">
+                <div>
+                    <img src="image/fries.jfif" alt="">
+                </div>
+                <h2>Fries</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+
+            </div>
+
+            <div class="item-1">
+                <div>
+                    <img src="image/loaded-fries.jfif" alt="">
+                </div>
+                <h2>Loaded fries</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main11">
+        <div class="food-burger">
+            <div class="item-1">
+                <div>
+                    <img src="image/coke1.jpg" alt="">
+                </div>
+                <h2>Coke</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/7up" alt="">
+                </div>
+                <h2>7up</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+            <div class="item-1">
+                <div>
+                    <img src="image/pepsi" alt="">
+                </div>
+                <h2>pepsi</h2>
+                <div class="prices">
+                    <div>
+                        <button class="bt4">Add to cart</button>
+                    </div>
+                    <div id="food-prices">
+                        $15.00
+                    </div>
+
+                </div>
+                <div class="quantity-control">
+                    <button class="qty minus">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty plus">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-3">
+        <div class="m3l1">
+            <div class="chef-imgs animationshow-left ">
+                <div>
+                    <img src="image/reservation.jfif" alt="" width="90%">
+                </div>
+            </div>
+        </div>
+        <div class="m3l1">
+            <div class="chef-info">
+                <h1>Ready to Serve</h1>
+                <p>Step into a world of refined elegance—soft candlelight glows against exposed brick walls, the hum of conversation blends with clinking wine glasses, and the aroma of freshly prepared dishes beckons you to the table. Our chefs craft each plate with passion, blending seasonal ingredients, time-honored techniques, and daring creativity.</p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="chef-btn ">
+                <a href="restaurant-reserve .html" style="text-decoration: none;" target="_blank"> <button class="bt5">
+                        Reservation
+                    </button> </a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="main-12">
+        <br>
+        <br>
+        <br>
+        <div class="logo-sec">
+            <h1> LOGO</h1>
+
+        </div>
+    </div>
+    <hr>
+    <div class="main-13">
+        <div class="m13l1">
+            <div class="h-last">
+                <h2>
+                    <a href="#"> Subscribe Our Newsletter </a>
+                </h2>
+            </div>
+            <div class="email-section">
+                <input type="email" required
+                    style="border-top: none;border-left: none; border-right: none; padding: 1rem;"
+                    placeholder="Enter your email">
+                <button type="submit" class="bt4" aria-placeholder="Email" style="padding: 0.5rem;">
+                    <a href="#" style="font-size: 1rem; padding: 1rem;"> <i class="fa-solid fa-arrow-right">
+                        </i ></a>
+                </button>
+            </div>
+
+            <div class="footericons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"> <i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+
+            </div>
+
+        </div>
+        <div class="lastfooter">
+            <div class="services">
+                <h1>Services</h1>
+                <ul class=" footer-options">
+                    <a href="#">
+                        <li> Online order</li>
+                    </a>
+                    <a href="#">
+                        <li> Pre-reservation</li>
+                    </a>
+                    <a href="#">
+                        <li> 24/7 services</li>
+                    </a>
+                    <a href="#">
+                        <li> Foodie Place</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="services">
+                <h1>Quick-links</h1>
+                <ul class=" footer-options">
+                    <a href="#Regular-menu">
+                        <li> Menu</li>
+                    </a>
+                    <a href="#">
+                        <li> Review-table</li>
+                    </a>
+                    <a href="#">
+                        <li>Blog</li>
+                    </a>
+                    <a href="#Regular-menu">
+                        <li> Order food</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="services">
+
+                <h1>about</h1>
+
+                <ul class=" footer-options">
+                    <a href="#">
+                        <li> Our Story</li>
+                    </a>
+                    <a href="#">
+                        <li> Benifits</li>
+                    </a>
+                    <a href="#">
+                        <li> Career</li>
+                    </a>
+
+                </ul>
+            </div>
+
+            <div class="services">
+                <h1>Help</h1>
+                <ul class=" footer-options">
+                    <a href="#">
+                        <li> Contact</li>
+                    </a>
+                    <a href="#">
+                        <li> Support</li>
+                    </a>
+                    <a href="#">
+                        <li> FAQ</li>
+                    </a>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="Resturent.js"></script>
+</body>
+
+</html>
