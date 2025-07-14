@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Reservation Form</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fefee9, #d2e3c8);
+      color: #2f4f2f;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2f4f2f;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-container {
+      background-color: #ffffffcc;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(34, 139, 34, 0.2);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #b2d8b2;
+      border-radius: 5px;
+      font-size: 1rem;
+      background-color: #f8fff8;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 15px;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+    }
+
+    button {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #3e8e41;
+    }
+
+    .tree {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .tree img {
+      width: 120px;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 600px) {
+      .form-row {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Restaurant Reservation</h1>
+
+  <div class="form-container">
+    <form id="reservationForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="reservationNumber">Reservation #:</label>
+          <input type="text" id="reservationNumber" value="RES-2024-" readonly />
+        </div>
+        
+        <div class="form-group">
+          <label for="date">Reservation Date:</label>
+          <input type="date" id="date" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" required />
+      </div>
+
+      <div class="form-group">
+        <label for="address">Special Requests:</label>
+        <textarea id="address" rows="3"></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="persons">Number of Persons:</label>
+          <select id="persons" required>
+            <option value="">Select</option>
+            <option value="1">1 Person</option>
+            <option value="2">2 Persons</option>
+            <option value="3">3 Persons</option>
+            <option value="4">4 Persons</option>
+            <option value="5">5 Persons</option>
+            <option value="6">6 Persons</option>
+            <option value="7">7+ Persons</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="tables">Tables Required:</label>
+          <select id="tables" required>
+            <option value="">Select</option>
+            <option value="1">1 Table</option>
+            <option value="2">2 Tables</option>
+            <option value="3">3 Tables</option>
+            <option value="4">Private Room</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="time">Reservation Time:</label>
+        <select id="time" required>
+          <option value="">Select Time</option>
+          <option value="11:00 AM">11:00 AM</option>
+          <option value="12:00 PM">12:00 PM</option>
+          <option value="1:00 PM">1:00 PM</option>
+          <option value="2:00 PM">2:00 PM</option>
+          <option value="6:00 PM">6:00 PM</option>
+          <option value="7:00 PM">7:00 PM</option>
+          <option value="8:00 PM">8:00 PM</option>
+          <option value="9:00 PM">9:00 PM</option>
+        </select>
+      </div>
+
+      <button type="submit">Confirm Reservation</button>
+    </form>
+  </div>
+
+  <div class="tree">
+    <img src="https://cdn-icons-png.flaticon.com/512/2909/2909764.png" alt="Tree">
+  </div>
+
+  <script>
+    const form = document.getElementById("reservationForm");
+    
+    // Generate random reservation number
+    document.getElementById("reservationNumber").value += Math.floor(1000 + Math.random() * 9000);
+    
+    // Set minimum date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById("date").min = today;
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const reservationNumber = document.getElementById("reservationNumber").value;
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const date = document.getElementById("date").value;
+      const persons = document.getElementById("persons").value;
+      const tables = document.getElementById("tables").value;
+      const time = document.getElementById("time").value;
+      const requests = document.getElementById("address").value;
+
+      alert(`Reservation Confirmed!\n\n
+Reservation #: ${reservationNumber}
+Name: ${name}
+Date: ${date} at ${time}
+Party Size: ${persons} persons
+Tables: ${tables}
+Contact: ${phone} | ${email}
+Special Requests: ${requests || 'None'}`);
+      
+      form.reset();
+      // Regenerate reservation number after submit
+      document.getElementById("reservationNumber").value = "RES-2024-" + Math.floor(1000 + Math.random() * 9000);
+    });
+  </script>
+
+</body>
+</html>
