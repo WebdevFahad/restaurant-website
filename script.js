@@ -122,8 +122,8 @@ snacks.addEventListener("click", () => {
     "animate__animated",
     "animate__fadeInRight",
     "animate__faster"
-  );      
-    console.log("hello 4");
+  );
+  console.log("hello 4");
 });
 
 // let scrol = document.querySelector(".gallery");
@@ -167,18 +167,18 @@ let sectionButtons = [
   friesbt,
   drinksbt,
 ];
-const buttons = document.querySelectorAll('.bt5');
-buttons.forEach(btn => {
-  btn.addEventListener('click', function() {
-    buttons.forEach(b => b.classList.remove('active-btn'));
-    this.classList.add('active-btn');
+const buttons = document.querySelectorAll(".bt5");
+buttons.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    buttons.forEach((b) => b.classList.remove("active-btn"));
+    this.classList.add("active-btn");
   });
 });
-const dishBtns = document.querySelectorAll('.bt6');
-dishBtns.forEach(btn => {
-  btn.addEventListener('click', function() {
-    dishBtns.forEach(b => b.classList.remove('active-btn'));
-    this.classList.add('active-btn');
+const dishBtns = document.querySelectorAll(".bt6");
+dishBtns.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    dishBtns.forEach((b) => b.classList.remove("active-btn"));
+    this.classList.add("active-btn");
   });
 });
 
@@ -376,7 +376,6 @@ function closeCart() {
 function placeOrder() {
   let meg = document.querySelector(".submit-meg");
 
-
   if (cartData.length === 0) {
     setTimeout(() => {
       meg.classList.remove("active");
@@ -388,13 +387,13 @@ function placeOrder() {
 
     meg.classList.add("active");
 
-      let cross = document.querySelector("#success-msg-button");
+    let cross = document.querySelector("#success-msg-button");
     cross.addEventListener("click", () => {
       meg.classList.remove("active");
     });
 
     closeCart();
-    return
+    return;
   } else {
     meg.innerHTML = ` <p class="ok-msg"> Your Order has been received Successfully</p>
                     <button id="success-msg-button">
@@ -406,7 +405,7 @@ function placeOrder() {
       meg.classList.remove("active");
     }, 5000);
 
-      let cross = document.querySelector("#success-msg-button");
+    let cross = document.querySelector("#success-msg-button");
 
     cross.addEventListener("click", () => {
       meg.classList.remove("active");
@@ -417,7 +416,6 @@ function placeOrder() {
     document.getElementById("cart-count-desktop").innerText = 0;
     document.getElementById("cart-count-mobile").innerText = 0;
     closeCart();
-    
   }
 }
 
@@ -660,53 +658,29 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") navSection.classList.remove("open");
 });
 
- 
-window.addEventListener("load",()=>{
+window.addEventListener("load", () => {
+  let loader = document.querySelector(".pre-loader");
+  let main1_left = document.querySelector(".m1l1");
+  let main1_right = document.querySelector(".m1l2");
+  let load2 = document.querySelector(".loader");
 
- 
-   let loader=document.querySelector(".pre-loader")
-   let main1_left=document.querySelector(".m1l1")
-   let main1_right=document.querySelector(".m1l2")
-   let load2=document.querySelector(".loader")
- 
-setTimeout(()=>{
- load2.classList.add("hide")
-  setTimeout(()=>{
-    loader.classList.add("active")
-     main1_right.classList.add("animate__animated","animate__fadeInRight")
-     main1_left.classList.add("animate__animated","animate__fadeInLeft")
-     nav.classList.add("hide")
-     
-setTimeout(()=>{
-  loader.style.display="none";
-   document.querySelectorAll(".lock-scroll").classList.remove(" lock-scroll") ;  
+  setTimeout(() => {
+    load2.classList.add("hide");
+    setTimeout(() => {
+      loader.classList.add("active");
+      main1_right.classList.add("animate__animated", "animate__fadeInRight");
+      main1_left.classList.add("animate__animated", "animate__fadeInLeft");
+      nav.classList.add("hide");
 
-
-
-
-
-   
-
-
- 
-
-
-
-
-},400)
-    
-  },1000)
-},2000)
-
-
-
- 
-  
-
-  
-})
-
-
+      setTimeout(() => {
+        loader.style.display = "none";
+        document
+          .querySelectorAll(".lock-scroll")
+          .classList.remove(" lock-scroll");
+      }, 400);
+    }, 1000);
+  }, 2000);
+});
 
 const navbar = document.querySelector(".nav");
 
@@ -718,18 +692,11 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
-
-
-
-
-
-
 // Initialize Swiper after DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-  const swiper = new Swiper('.new-1', {
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".new-1", {
     loop: true,
-    
+
     // Mouse wheel control
     mousewheel: {
       forceToAxis: true,
@@ -737,25 +704,24 @@ document.addEventListener('DOMContentLoaded', function() {
       releaseOnEdges: true,
       invert: false,
     },
-    
+
     // Pagination
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
       dynamicBullets: true,
     },
 
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-    
-    
+
     // Responsive breakpoints
     breakpoints: {
       0: {
-        slidesPerView: 1, 
+        slidesPerView: 1,
         spaceBetween: 1,
       },
       768: {
@@ -766,6 +732,38 @@ document.addEventListener('DOMContentLoaded', function() {
         slidesPerView: 3,
         spaceBetween: 10,
       },
+    },
+  });
+});
+
+let imagecontainer = document.querySelectorAll(".imagecontainer");
+imagecontainer.forEach((e) => {
+  let itchange = false;
+  e.addEventListener("mouseenter", () => {
+    if (!itchange) {
+      let values = [
+        "image/chefofchange1.webp",
+        "image/chefofchange2.webp",
+        "image/chefofchange3.webp",
+      ];
+      let currentsrc = e.querySelector("img").src;
+      let randomidx;
+      do {
+         randomidx = values[Math.floor(Math.random() * values.length)];
+      } while (currentsrc.includes(randomidx));
+
+      e.innerHTML = ` <div class="chef-img  ">
+                <div>
+                    <img src="${randomidx}" alt="" width="90%" loading="lazy">
+                </div>
+            </div>
+
+                `;
+      itchange = true;
     }
+  });
+
+  e.addEventListener("mouseleave",()=>{
+    itchange=false;
   });
 });
