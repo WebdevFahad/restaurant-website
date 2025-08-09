@@ -12,27 +12,27 @@ Soda.addEventListener("click", () => {
   img1.classList.remove(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
   img3.classList.remove(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
 
   img4.classList.remove(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
 
   img2.classList.add(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
 
@@ -42,27 +42,27 @@ dishes.addEventListener("click", () => {
   img2.classList.remove(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
 
   img3.classList.remove(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
   img4.classList.remove(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
 
   img1.classList.add(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
 
@@ -72,26 +72,26 @@ platter.addEventListener("click", () => {
   img2.classList.remove(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
   img1.classList.remove(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
   img4.classList.remove(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
 
   img3.classList.add(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
 
@@ -101,48 +101,47 @@ snacks.addEventListener("click", () => {
   img2.classList.remove(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
   img3.classList.remove(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
   img1.classList.remove(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
   );
 
   img4.classList.add(
     "active",
     "animate__animated",
-    "animate__fadeInTopRight",
+    "animate__fadeInRight",
     "animate__faster"
-  );
-
-  console.log("hello 4");
+  );      
+    console.log("hello 4");
 });
 
-let scrol = document.querySelector(".gallery");
-let leftbtn = document.querySelector("#left1");
-let rightbtn = document.querySelector("#right1");
-scrol.addEventListener("wheel", (e) => {
-  e.preventDefault();
-  scrol.scrollLeft += e.deltaY;
-});
-leftbtn.addEventListener("click", () => {
-  scrol.style.scrollBehavior = "smooth";
-  scrol.scrollLeft -= 300;
-});
-rightbtn.addEventListener("click", () => {
-  scrol.style.scrollBehavior = "smooth";
+// let scrol = document.querySelector(".gallery");
+// let leftbtn = document.querySelector("#left1");
+// let rightbtn = document.querySelector("#right1");
+// scrol.addEventListener("wheel", (e) => {
+//   e.preventDefault();
+//   scrol.scrollLeft += e.deltaY;
+// });
+// leftbtn.addEventListener("click", () => {
+//   scrol.style.scrollBehavior = "smooth";
+//   scrol.scrollLeft -= 300;
+// });
+// rightbtn.addEventListener("click", () => {
+//   scrol.style.scrollBehavior = "smooth";
 
-  scrol.scrollLeft += 300;
-});
+//   scrol.scrollLeft += 300;
+// });
 
 let dessertbt = document.querySelector("#dessert-bt");
 let platterbt = document.querySelector("#platter-bt");
@@ -168,6 +167,20 @@ let sectionButtons = [
   friesbt,
   drinksbt,
 ];
+const buttons = document.querySelectorAll('.bt5');
+buttons.forEach(btn => {
+  btn.addEventListener('click', function() {
+    buttons.forEach(b => b.classList.remove('active-btn'));
+    this.classList.add('active-btn');
+  });
+});
+const dishBtns = document.querySelectorAll('.bt6');
+dishBtns.forEach(btn => {
+  btn.addEventListener('click', function() {
+    dishBtns.forEach(b => b.classList.remove('active-btn'));
+    this.classList.add('active-btn');
+  });
+});
 
 function switchSection(showSection, clickedButton) {
   const allSections = [main5, main6, main7, main8, main9, main10, main11];
@@ -630,18 +643,22 @@ let render = (results) => {
   });
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  let navhalfsection = document.querySelector(".nav-half-section");
+const hamburger = document.getElementById("hamburger");
+const navSection = document.querySelector(".nav-half-section");
 
-  document.querySelector(".hamburger").addEventListener("click", () => {
-    if (navhalfsection.style.display === "none") {
-      navhalfsection.style.display = "block";
-    } else {
-      navhalfsection.style.display = "none";
-    }
-  });
+hamburger.addEventListener("click", () => {
+  navSection.classList.toggle("open");
 });
- 
+
+navSection.addEventListener("click", (e) => {
+  // Close if click outside nav content
+  if (e.target === navSection) navSection.classList.remove("open");
+});
+
+// Optional: ESC key closes menu
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") navSection.classList.remove("open");
+});
 
  
 window.addEventListener("load",()=>{
@@ -651,22 +668,23 @@ window.addEventListener("load",()=>{
    let main1_left=document.querySelector(".m1l1")
    let main1_right=document.querySelector(".m1l2")
    let load2=document.querySelector(".loader")
-  let nav=document.querySelector(".nav")
+ 
 setTimeout(()=>{
  load2.classList.add("hide")
   setTimeout(()=>{
     loader.classList.add("active")
-     main1_right.classList.add("animate__animated","animate__zoomIn")
-     main1_left.classList.add("animate__animated","animate__zoomIn")
+     main1_right.classList.add("animate__animated","animate__fadeInRight")
+     main1_left.classList.add("animate__animated","animate__fadeInLeft")
      nav.classList.add("hide")
-   
+     
 setTimeout(()=>{
   loader.style.display="none";
+   document.querySelectorAll(".lock-scroll").classList.remove(" lock-scroll") ;  
 
-  
- document.querySelector(".lock-scroll").classList.remove("lock-scroll")   
- nav.classList.remove("hide");
- nav.classList.add("animate__animated","animate__fadeInDown");
+
+
+
+
    
 
 
@@ -688,24 +706,66 @@ setTimeout(()=>{
   
 })
 
-// window.addEventListener("DOMContentLoaded",()=>{
-//   let move_1=document.querySelectorAll(".m2l2")
-//   let move_2=document.querySelectorAll(".m3l1")
 
-//   let observ=new IntersectionObserver((enteries)=>{
-//     enteries.forEach((entry)=>{
-//         if(entry.isIntersecting){
-//           entry.target.classList.add("animate__animated","animate__zoomIn")
-//         }
-      
-//     });
-//   },{
-//     threshold:0.01
-//   })
-//   move_1.forEach((move)=>{
-//     observ.observe(move)
-//   })
-//   move_2.forEach((move)=>{
-//     observ.observe(move)
-//   })
-// });
+
+const navbar = document.querySelector(".nav");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+
+
+
+
+
+
+
+// Initialize Swiper after DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  const swiper = new Swiper('.new-1', {
+    loop: true,
+    
+    // Mouse wheel control
+    mousewheel: {
+      forceToAxis: true,
+      sensitivity: 1,
+      releaseOnEdges: true,
+      invert: false,
+    },
+    
+    // Pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    
+    // Responsive breakpoints
+    breakpoints: {
+      0: {
+        slidesPerView: 1, 
+        spaceBetween: 1,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+    }
+  });
+});

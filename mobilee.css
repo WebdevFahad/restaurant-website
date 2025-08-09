@@ -1,0 +1,58 @@
+@media (max-width:750px) {
+  .nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-right: 0.5rem;
+    padding-top: 1rem;
+    
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.3); /* translucent white */
+    backdrop-filter: blur(10px); /* blur the background */
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .nav-options ol {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    flex-wrap: wrap;
+    font-size: 2rem;
+  }
+  
+  .order-logo {
+    font-size: 2.5rem;
+    text-decoration: none;
+  }
+  
+  header {
+    background-color: rgb(216, 226, 218);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .m1l1 {
+    margin-top: 5rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1rem;
+    height: auto;
+  }
+  
+  .m1l1 h1 {
+    font-size: 4rem; /* Adjusted for mobile */
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: rgb(0, 0, 0);
+  }
+    
+}
